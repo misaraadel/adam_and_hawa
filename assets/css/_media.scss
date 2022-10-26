@@ -60,13 +60,18 @@
   }
 
   header {
-    padding: 150px 0px 80px;
+    padding: 150px 0px 0px;
     background: var(--light) !important;
     background-image: none;
+
+    .mobile-only {
+      display: block;
+      margin-top: 20px;
+    }
   }
 
   .about-us {
-    padding: 100px 0px 30px;
+    padding: 30px 0px 30px;
 
     .nav-tabs {
       justify-content: space-between !important;

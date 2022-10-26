@@ -1226,24 +1226,29 @@ header .contain p {
   font-weight: 500;
   margin: 30px 0px;
 }
+header .mobile-only {
+  display: none;
+}
+header .mobile-only .image-content {
+  width: 100%;
+  height: 260px;
+}
+header .mobile-only .image-content img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-animation: translateY 2s linear infinite;
+          animation: translateY 2s linear infinite;
+}
 
 .about-us {
   width: 100%;
   padding: 180px 0px 60px 0px;
   position: relative;
   z-index: 9;
-}
-.about-us::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 80px;
-  background: url("../images/makeup.png") center/contain repeat-x;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  -webkit-animation: backgroundMove 20s linear infinite;
-          animation: backgroundMove 20s linear infinite;
 }
 .about-us .contain {
   width: 100%;
@@ -1694,12 +1699,16 @@ footer .content .copyrigts .socail li a:hover img {
     height: 100vh;
   }
   header {
-    padding: 150px 0px 80px;
+    padding: 150px 0px 0px;
     background: var(--light) !important;
     background-image: none;
   }
+  header .mobile-only {
+    display: block;
+    margin-top: 20px;
+  }
   .about-us {
-    padding: 100px 0px 30px;
+    padding: 30px 0px 30px;
   }
   .about-us .nav-tabs {
     justify-content: space-between !important;
